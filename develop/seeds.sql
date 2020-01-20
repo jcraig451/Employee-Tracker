@@ -4,7 +4,9 @@ VALUES ("Engineering"),
        ("Accounting"),
        ("IT"),
        ("Sales"),
-       ("Marketing");
+       ("Marketing"),
+       ("Maintaince");
+
 
 INSERT INTO role ( title, salary, department_id)
 VALUES ("Mechanical Engineer", 70000, 1),
@@ -16,18 +18,15 @@ VALUES ("Mechanical Engineer", 70000, 1),
        ("UI Developer", 70000, 3),
        ("UI Developer Manager", 150000, 3),
        ("Audit Lead", 65000, 2),
-       ("Account Manager", 135000, 2);
+       ("Account Manager", 135000, 2),
+       ("Janitor", 200000, 6);
 
-SELECT title, salary, name
-FROM role r INNER JOIN department dp 
-ON r.department_id = dp.id;
+INSERT INTO employee( first_name, last_name, role_id, manager_id)
+VALUES ("Josh", "Craig", 1, NULL),
+        ("Brock", "Thingpen", 7, NULL),
+        ("Tyler", "Cauley", 11, 1),
+        ("Joe", "Bob", 11, 1);
 
-SELECT first_name, last_name, title, salary
-FROM employee emp INNER JOIN role r 
-ON emp.role_id = r.id;
-
-SELECT first_name, last_name, title, salary, name
-FROM ((employee emp INNER JOIN role r 
-ON emp.role_id = r.id)
-INNER JOIN department dp 
-ON r.department_id = dp.id);
+SELECT * FROM employee;
+SELECT * FROM role;
+SELECT * FROM department;

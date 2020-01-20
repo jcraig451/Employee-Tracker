@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS emplyeeTracker_DB;
-CREATE DATABASE emplyeeTracker_DB;
+DROP DATABASE IF EXISTS employeeTracker_DB;
+CREATE DATABASE employeeTracker_DB;
 
-USE emplyeeTracker_DB;
+USE employeeTracker_DB;
 
 CREATE TABLE department(
   id INT NOT NULL AUTO_INCREMENT,
@@ -25,8 +25,3 @@ CREATE TABLE employee(
   manager_id INT NULL,
   PRIMARY KEY (id)
 );
-
--- ### Altering AUTO start increment points for tables.
-
-ALTER TABLE role AUTO_INCREMENT = 20;
-ALTER TABLE employee AUTO_INCREMENT = 50;
