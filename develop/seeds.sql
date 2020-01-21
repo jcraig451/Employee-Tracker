@@ -21,10 +21,11 @@ VALUES ("Mechanical Engineer", 70000, 1),
        ("Account Manager", 135000, 2),
        ("Janitor", 200000, 6);
 
+
 INSERT INTO employee( first_name, last_name, role_id, manager_id)
 VALUES ("Josh", "Craig", 1, NULL),
-        ("Brock", "Thingpen", 7, NULL),
-        ("Tyler", "Cauley", 11, 1),
+        ("John", "Snow", 7, NULL),
+        ("Lord", "Farquad", 11, 1),
         ("Joe", "Bob", 11, 1);
 
 SELECT * FROM employee;

@@ -102,7 +102,6 @@ function viewAllSearch() {
 function departmentSearch() {
   var query = "SELECT * FROM department";
   connection.query(query, function (err, res) {
-    console.log(res);
     if (err) throw err;
     inquirer
       .prompt({
@@ -138,7 +137,6 @@ function roleSearch() {
 function addEmployee() {
   var query = "SELECT title FROM role";
   connection.query(query, function (err, res) {
-    console.log(res);
     if (err) throw err;
     inquirer
       .prompt([{
@@ -154,7 +152,7 @@ function addEmployee() {
           type: "list",
           message: "New Employee's Title?",
           choices: res
-        }])
+        }]);
   })
 }
 
